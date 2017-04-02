@@ -1,14 +1,17 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% load static %}
+{% extends "home/layouts/main.html" %}
 
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
-</html>
+{% block content %}
+    <!--HTML of the main homepage see the example right below-->
+    <div class="col-md-12" style="margin-top:20px">
+        <button class="btn btn-default col-md-12">Press Me</button>
+    </div>
+{% endblock %}
+
+{% block localscripts %}
+    <!-- 
+        If for any reason you need some scripting for this 
+        particular template just include them here or just
+        writ them inline, whatever, your imagination is 
+        the limit.
+    -->
+{% endblock %}
