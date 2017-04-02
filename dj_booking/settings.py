@@ -25,8 +25,9 @@ SECRET_KEY = ''
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    '*'
+]
 
 # Application definition
 
@@ -107,6 +108,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'common-static')
+]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 ]
 
 # Internationalization
